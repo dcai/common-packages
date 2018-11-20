@@ -1,6 +1,6 @@
 {
   "name": "@friendlyrobot/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "eslint config",
   "main": "src/index.js",
   "publishConfig": {
