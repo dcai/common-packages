@@ -9,6 +9,7 @@ class Button extends Component {
     };
     this.onClick = this.onClick.bind(this);
   }
+
   onClick() {
     this.setState(
       Object.assign({}, this.state, {
@@ -17,6 +18,7 @@ class Button extends Component {
       }),
     );
   }
+
   render() {
     return (
       <button onClick={this.onClick}>
