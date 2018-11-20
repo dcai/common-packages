@@ -1,0 +1,27 @@
+# ignore node_modules
+node_modules
+
+# ignore unit test coverage report
+.coverage
+coverage
+
+# ignore unit test report
+junit.xml
+
+# ignore generated webpack bundle
+/@packages/**/dist/
+/@packages/**/.npmrc
+/@packages/**/*.tgz
+/@packages/**/stats.json
+/@packages/**/package-lock.json
+
+# ignore docs
+/docs
+/docs-tgz
+/npm-tgz
+
+# ignore editor files
+.idea
+yarn.lock
+build
+lerna-debug.log
