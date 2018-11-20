@@ -14,7 +14,7 @@
   },
   "ignoreChanges": [
     "**/dist/**",
-    "**/test/**",
+    "**/tests/**",
     "**/*.md",
     "**/package-lock.json"
   ],
