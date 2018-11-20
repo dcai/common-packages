@@ -1,11 +1,11 @@
-import React from "react";
-import { shallow } from "enzyme";
-import { Button } from "./index.js";
+import React from 'react';
+import { shallow } from 'enzyme';
+import { Button } from '../src/';
 
-describe("<Button />", () => {
-  it("renders <Button /> component", () => {
+describe('<Button />', () => {
+  it('renders <Button /> component', () => {
     const wrapper = shallow(<Button />);
-    expect(wrapper.find(".label").length).toBe(1);
+    expect(wrapper.find('.label').length).toBe(1);
   });
   //
   // it('renders an `.icon-star`', () => {

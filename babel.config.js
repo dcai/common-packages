@@ -1,4 +1,8 @@
-module.exports = function(api) {
+module.exports = function(api = {}) {
+  if (api.cache) {
+    api.cache(true);
+  }
+
   const presets = [
     [
       '@babel/preset-env',
@@ -12,7 +16,11 @@ module.exports = function(api) {
     ],
     '@babel/preset-react',
   ];
-  const plugins = ['lodash'];
+  const plugins = [
+    'lodash',
+    '@babel/plugin-transform-modules-commonjs',
+    '@babel/plugin-proposal-class-properties',
+  ];
   return {
     presets,
     plugins,
