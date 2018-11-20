@@ -1,23 +1,24 @@
-const publishCommand = `npm start release.pre-publish && lerna publish`;
+const cmdPrepublish =
+  'nps release.pre-publish.reset-git && nps release.pre-publish.setup-npm';
+const cmdPublish = `npm start release.pre-publish && lerna publish`;
+const cmdCopyNpmrc =
+  'for p in @packages/*; do cp npmrc-template.ini ${p}/.npmrc; done';
 
 const scripts = {
   tools: {
     create: 'node ./tools/createComponent.js',
   },
 
-  // use npm start "build componentname" OR nps "build componentname"
-  // Useful to build individual component and test before publishing
   build: {
     default: `node ./tools/compile.js --component`,
   },
 
   release: {
-    default: publishCommand,
+    default: cmdPublish,
     prePublish: {
-      default:
-        'nps release.pre-publish.reset-git && nps release.pre-publish.setup-npm',
+      default: cmdPrepublish,
       resetGit: 'git reset --hard HEAD',
-      setupNPM: `for p in @packages/*; do cp .npmrc $p; done`,
+      setupNPM: cmdCopyNpmrc,
     },
   },
 };
