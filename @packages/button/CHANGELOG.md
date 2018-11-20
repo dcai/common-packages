@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.10](https://github.com/dcai/common-packages/compare/@friendlyrobot/button@1.0.9...@friendlyrobot/button@1.0.10) (2018-11-20)
+
+
+### Bug Fixes
+
+* jest ([fb29ca9](https://github.com/dcai/common-packages/commit/fb29ca9))
+
+
+
+
+
 ## [1.0.9](https://github.com/dcai/common-packages/compare/@friendlyrobot/button@1.0.8...@friendlyrobot/button@1.0.9) (2018-11-20)
 
 **Note:** Version bump only for package @friendlyrobot/button
