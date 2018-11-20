@@ -1,6 +1,7 @@
 const path = require('path');
 const camelCase = require('camelcase');
 const webpack = require('webpack');
+const babelConfig = require('./babel.config');
 
 const pkgPath = process.cwd();
 const pkg = require(path.resolve(pkgPath, './package.json'));
@@ -11,8 +12,10 @@ const outputName = outputMain.name || 'bundle';
 const outputFile = outputMain.base || 'bundle.js';
 const outputPathLocal = path.resolve(pkgPath, outputPath);
 
+const mode = 'production';
+
 module.exports = {
-  mode: 'production',
+  mode,
   entry: './src/index.js',
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -28,6 +31,23 @@ module.exports = {
     colors: true,
     reasons: true,
   },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: babelConfig(),
+        },
+      },
+    ],
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(mode),
+    }),
+  ],
   externals: [
     'react',
     'react-dom',
@@ -48,18 +68,5 @@ module.exports = {
     'moment-timezone',
     'shortid',
     'axios',
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        use: 'babel-loader',
-      },
-    ],
-  },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
   ],
 };

@@ -16,8 +16,8 @@ if (fs.existsSync(`${cwd}/webpack.config`)) {
 
 webpack(config, (err, stats) => {
   if (err || stats.hasErrors()) {
-    log.error(
-      `Build ${pkg.name} has failed.`,
+    log.warn(`Build ${pkg.name} has failed.`);
+    log.warn(
       stats.toString({
         color: true,
       }),

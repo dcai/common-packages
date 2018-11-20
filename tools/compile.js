@@ -22,7 +22,7 @@ if (!componentName) {
 const packagePath = `${__dirname}/../@packages/${componentName}`;
 
 // now we build the package
-log.info(packagePath);
+log.info(path.resolve(packagePath));
 if (isString(packagePath)) {
   const webpack = spawn(
     'node',

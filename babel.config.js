@@ -1,6 +1,5 @@
 module.exports = function(api) {
   const presets = [
-    '@babel/preset-react',
     [
       '@babel/preset-env',
       {
@@ -11,36 +10,10 @@ module.exports = function(api) {
         },
       },
     ],
+    '@babel/preset-react',
   ];
   const plugins = ['lodash'];
-
-  const env = {
-    test: {
-      plugins: [
-        [
-          'styled-components',
-          {
-            minify: false,
-          },
-        ],
-        'lodash',
-      ],
-
-      presets: [
-        [
-          'env',
-          {
-            targets: {
-              node: 8,
-            },
-          },
-        ],
-        'react',
-      ],
-    },
-  };
   return {
-    env,
     presets,
     plugins,
   };

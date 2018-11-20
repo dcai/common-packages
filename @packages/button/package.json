@@ -1,0 +1,14 @@
+{
+  "name": "@friendlyrobot/button",
+  "version": "1.0.5",
+  "description": "say hello",
+  "main": "dist/bundle.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Dongsheng Cai <d@tux.im> (http://dongsheng.org/)",
+  "scripts": {
+    "prepublish": "node ../../tools/compile.js"
+  },
+  "license": "BSD-2-Clause"
+}
