@@ -1,0 +1,20 @@
+{
+  "name": "@friendlyrobot/eslint-config",
+  "version": "1.0.0",
+  "description": "eslint config",
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.x",
+    "eslint": "^5.x",
+    "eslint-config-prettier": "^3.x",
+    "eslint-plugin-babel": "^5.x",
+    "eslint-plugin-import": "^2.x",
+    "eslint-plugin-prettier": "^3.x",
+    "eslint-plugin-react": "^7.x",
+    "prettier": "^1.x"
+  },
+  "gitHead": "0bb81f2be6f14e18ee643e17efb347413f632cb6"
+}
