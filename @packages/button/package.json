@@ -1,6 +1,6 @@
 {
   "name": "@friendlyrobot/button",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "say hello",
   "main": "dist/bundle.js",
   "publishConfig": {
