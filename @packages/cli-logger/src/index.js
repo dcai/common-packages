@@ -55,6 +55,7 @@ const setLogLevel = logLv => {
   log.info(`set log level to ${logLevel}`);
 };
 const log = {
+  error: msg => logMessage(msg, logLevels.SEVERE),
   severe: msg => logMessage(msg, logLevels.SEVERE),
   warn: msg => logMessage(msg, logLevels.WARN),
   info: msg => logMessage(msg, logLevels.INFO),
