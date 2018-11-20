@@ -9,7 +9,7 @@
       "allowBranch": ["master", "develop"],
       "yes": true,
       "conventionalCommits": true,
-      "message": "chore(release): publish %s"
+      "message": "chore(release): publish npm packages"
     }
   },
   "ignoreChanges": [
