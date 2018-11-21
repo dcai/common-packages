@@ -1,6 +1,6 @@
 {
   "name": "@friendlyrobot/code-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Dongsheng Cai",
   "license": "BSD-2-Clause",
   "description": "code-generator",
@@ -11,7 +11,11 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": ["src", "lib", "dist"],
+  "files": [
+    "src",
+    "lib",
+    "dist"
+  ],
   "scripts": {
     "prepublish": "echo @friendlyrobot/code-generator",
     "build": "webpack"
