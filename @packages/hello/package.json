@@ -1,6 +1,6 @@
 {
   "name": "@friendlyrobot/hello",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "say hello",
   "entry": "./src/index.ts",
   "main": "dist/bundle.js",
