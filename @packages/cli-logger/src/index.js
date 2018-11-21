@@ -1,6 +1,8 @@
 /* eslint-disable */
 const chalk = require('chalk');
+
 const logLevels = { SEVERE: 5, WARN: 4, INFO: 3, DEBUG: 2, SILLY: 1 };
+let logLevel = logLevels.SILLY;
 const LOGPREPEND = '> ';
 
 const logMessage = (msg, level = 5) => {
@@ -23,7 +25,7 @@ const logMessage = (msg, level = 5) => {
 };
 const logObject = (obj, level = 1) => {
   if (level >= logLevel) {
-    console.dir(obj);
+    console.dir(obj, { depth: null, colors: true });
   }
 };
 const setLogLevel = logLv => {
@@ -63,7 +65,5 @@ const log = {
   silly: msg => logMessage(msg, logLevels.SILLY),
   dir: obj => logObject(obj, logLevels.SILLY),
 };
-
-let logLevel = logLevels.SILLY;
 
 module.exports = { log, logLevels, setLogLevel };
