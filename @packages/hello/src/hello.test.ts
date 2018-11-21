@@ -1,4 +1,4 @@
-const hello = require('./hello');
+import hello from './hello';
 
 test('', () => {
   expect(hello()).toBe('hello');

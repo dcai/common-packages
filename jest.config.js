@@ -12,11 +12,12 @@ module.exports = {
   reporters: ['jest-dot-reporter'],
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.tsx?$': 'ts-jest',
   },
   setupTestFrameworkScriptFile: '<rootDir>/jest.setup.js',
   // reporters: ['jest-junit'],
   // snapshotSerializers: ['enzyme-to-json/serializer'],
-  testMatch: ['**/@packages/**/*.test.{js,jsx}'],
+  testMatch: ['**/@packages/**/*.test.{js,jsx,ts,tsx}'],
   moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
   testPathIgnorePatterns: ignorePatterns,
   coveragePathIgnorePatterns: ignorePatterns,

@@ -6,6 +6,8 @@ const babelConfig = require('./babel.config');
 const pkgPath = process.cwd();
 const pkg = require(path.resolve(pkgPath, './package.json'));
 
+const { entry = './src/index.js' } = pkg;
+
 const outputMain = path.parse(pkg.main);
 const outputPath = outputMain.path || 'dist';
 const outputName = outputMain.name || 'bundle';
@@ -16,9 +18,9 @@ const mode = 'production';
 
 module.exports = {
   mode,
-  entry: './src/index.js',
+  entry,
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.jsx', '.json', '.tsx', '.ts'],
   },
   output: {
     path: outputPathLocal,
@@ -26,7 +28,8 @@ module.exports = {
     library: camelCase(outputName),
     libraryTarget: 'umd',
   },
-  devtool: 'source-map',
+  // devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
   stats: {
     colors: true,
     reasons: true,
@@ -39,6 +42,13 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: babelConfig(),
+        },
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader',
         },
       },
     ],
