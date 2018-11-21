@@ -1,20 +1,45 @@
-const camelCase = require('camelcase');
 const fs = require('fs');
 const fse = require('fs-extra');
 const glob = require('glob');
 const mustache = require('mustache');
 const path = require('path');
+const prettier = require('prettier');
+const { find, includes } = require('lodash');
 const { log } = require('@friendlyrobot/cli-logger');
 
-const templateFolder = path.join(__dirname, './templates');
-const packagesFolder = path.join(__dirname, '../../@packages');
+const prettierConfig = {
+  arrowParens: 'avoid',
+  printWidth: 80,
+  useTabs: false,
+  tabWidth: 2,
+  semi: true,
+  singleQuote: true,
+  trailingComma: 'all',
+  bracketSpacing: true,
+  jsxBracketSameLine: false,
+};
 
 const handleGenericTemplate = (filePath, templatePath, data) => {
   const targetPath = path.dirname(filePath);
   const fileData = fs.readFileSync(templatePath, 'utf8');
   const newFilePath = filePath.replace('.mustache', '');
   log.info(`Writing to ${newFilePath}`);
-  const f = fs.writeFileSync(newFilePath, mustache.render(fileData, data));
+  const rendered = mustache.render(fileData, data);
+  const ext = path.extname(newFilePath);
+  const mapping = [
+    ['babylon', ['.js', '.jsx']],
+    ['typescript', ['.ts', '.tsx']],
+    ['json', ['.json']],
+    ['yaml', ['.yaml', '.yml']],
+  ];
+  const parser = find(mapping, item => includes(item[1], ext))[0] || false;
+
+  const f = fs.writeFileSync(
+    newFilePath,
+    parser
+      ? prettier.format(rendered, { ...prettierConfig, parser })
+      : rendered,
+  );
 };
 
 const generate = (templateFolder, targetFolder, data) =>
@@ -37,17 +62,7 @@ const generate = (templateFolder, targetFolder, data) =>
     }
   });
 
-const create = componentName => {
-  log.info(`Creating: ${componentName}`);
-  const targetFolder = path.join(packagesFolder, componentName);
-  const data = {
-    name: componentName,
-    camelName: camelCase(componentName),
-  };
-  return generate(templateFolder, targetFolder, data);
-};
-
 module.exports = {
-  create,
+  handleGenericTemplate,
   generate,
 };
