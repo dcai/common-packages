@@ -5,6 +5,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "prepublish": "node ../../tools/compile.js"
+  },
   "main": "./src/index.js",
   "dependencies": {
     "chalk": "^2.4.1"
