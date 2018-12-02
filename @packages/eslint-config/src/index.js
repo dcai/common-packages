@@ -4,7 +4,13 @@ const ERROR = 2;
 module.exports = {
   parser: 'babel-eslint',
   plugins: ['babel', 'import', 'react', 'prettier'],
-  extends: ['prettier'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'prettier/react',
+    'prettier/standard',
+  ],
 
   globals: {
     $: true,
