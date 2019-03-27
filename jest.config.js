@@ -15,7 +15,7 @@ module.exports = {
     '^.+\\.jsx?$': 'babel-jest',
     '^.+\\.tsx?$': 'ts-jest',
   },
-  setupTestFrameworkScriptFile: '<rootDir>/jest.setup.js',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   // reporters: ['jest-junit'],
   // snapshotSerializers: ['enzyme-to-json/serializer'],
   testMatch: ['**/@packages/**/*.test.{js,jsx,ts,tsx}'],

@@ -28,9 +28,8 @@
     "@friendlyrobot/cli-logger": "^1.0.4",
     "@friendlyrobot/code-generator": "0.0.4",
     "@friendlyrobot/eslint-config": "^1.x",
-    "@types/jest": "^23.3.9",
+    "@types/jest": "^23.3.14",
     "acorn": "^6.0.4",
-    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-lodash": "^3.3.2",
@@ -65,25 +64,6 @@
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "jest": {
-    "reporters": [
-      "jest-junit"
-    ],
-    "setupTestFrameworkScriptFile": "<rootDir>/jest-setup.js",
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "testMatch": [
-      "**/packages/*/src/**/*.test.js"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/packages/\\*\\*/dist/"
-    ],
-    "coveragePathIgnorePatterns": [
-      "<rootDir>/packages/(?:.+?)/dist/"
-    ],
-    "coverageDirectory": ".coverage/"
   },
   "dependencies": {}
 }
