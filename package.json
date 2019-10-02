@@ -23,7 +23,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.5.0",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
-    "@commitlint/cli": "^8.0.0",
+    "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^6.1.3",
     "@friendlyrobot/cli-logger": "^1.0.4",
     "@friendlyrobot/code-generator": "0.0.4",
