@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/eslint-config@1.0.3...@friendlyrobot/eslint-config@1.1.0) (2019-10-02)
+
+
+### Features
+
+* **eslint:** fix rules ([ed3e0b8](https://github.com/dcai/common-packages/commit/ed3e0b8))
+
+
+
+
+
 ## [1.0.3](https://github.com/dcai/common-packages/compare/@friendlyrobot/eslint-config@1.0.2...@friendlyrobot/eslint-config@1.0.3) (2019-10-02)
 
 
