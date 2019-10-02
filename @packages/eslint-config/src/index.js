@@ -1,4 +1,5 @@
 const OFF = 0;
+const WARN = 1;
 const ERROR = 2;
 
 module.exports = {
@@ -11,6 +12,14 @@ module.exports = {
     'prettier/react',
     'prettier/standard',
   ],
+
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx'],
+      },
+    },
+  },
 
   globals: {
     $: true,
@@ -37,5 +46,6 @@ module.exports = {
     // react
     'react/no-danger': ERROR,
     'react/no-direct-mutation-state': ERROR,
+    'react/prop-types': WARN,
   },
 };
