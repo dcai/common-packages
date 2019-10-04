@@ -21,5 +21,6 @@
     "yosay": "^2.0.1"
   },
   "repository": "git@github.com:dcai/common-packages.git",
-  "license": "BSD-2-Clause-FreeBSD"
+  "license": "BSD-2-Clause-FreeBSD",
+  "gitHead": "348a98c11ca1111495496f77de028765fb3a69d5"
 }

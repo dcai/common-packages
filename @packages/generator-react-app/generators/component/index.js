@@ -13,7 +13,7 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'name',
-        message: 'component name',
+        message: 'Component name',
         default: this.options.componentName,
       },
     ]).then(answers => answers);
