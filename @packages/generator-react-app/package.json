@@ -1,0 +1,25 @@
+{
+  "name": "@friendlyrobot/generator-react-app",
+  "version": "0.0.1",
+  "description": "react app scaffolding",
+  "homepage": "",
+  "author": {
+    "name": "Dongsheng Cai",
+    "email": "d@tux.im",
+    "url": ""
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^2.0.1",
+    "chalk": "^2.1.0",
+    "yosay": "^2.0.1"
+  },
+  "repository": "git@github.com:dcai/common-packages.git",
+  "license": "BSD-2-Clause-FreeBSD"
+}
