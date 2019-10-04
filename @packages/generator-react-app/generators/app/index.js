@@ -6,10 +6,6 @@ module.exports = class extends Generator {
 
     this.argument('appname', { type: String, required: false });
     this.appname = this.options.appname;
-    // this.option('skip-install', {
-    // desc: 'Create a stateless component instead of a full one',
-    // defaults: false,
-    // });
   }
 
   prompting() {
