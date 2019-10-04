@@ -1,6 +1,6 @@
 {
   "name": "@friendlyrobot/generator-react-app",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "react app scaffolding",
   "homepage": "",
   "author": {
@@ -16,8 +16,8 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "^2.0.1",
     "chalk": "^2.1.0",
+    "yeoman-generator": "^2.0.1",
     "yosay": "^2.0.1"
   },
   "repository": "git@github.com:dcai/common-packages.git",
