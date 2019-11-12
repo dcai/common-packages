@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-react-app@0.1.2...@friendlyrobot/generator-react-app@0.3.0) (2019-11-12)
+
+
+### Bug Fixes
+
+* **generators:** add .npmignore ([23e9c10](https://github.com/dcai/common-packages/commit/23e9c10))
+* **generators:** version bump ([3a37ffb](https://github.com/dcai/common-packages/commit/3a37ffb))
+
+
+### Features
+
+* **generators:** yeoman templates ([29b9162](https://github.com/dcai/common-packages/commit/29b9162))
+
+
+
+
+
 ## [0.1.2](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-react-app@0.1.1...@friendlyrobot/generator-react-app@0.1.2) (2019-10-04)
 
 
