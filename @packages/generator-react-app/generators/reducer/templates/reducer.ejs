@@ -1,0 +1,21 @@
+import { combineActions, handleActions } from 'redux-actions';
+import { request, receive, error } from '../actions/<%= reducer.reducerName %>';
+
+const defaultState = {};
+
+const <%= reducer.reducerName.toLowerCase() %> = handleActions(
+  {
+    [request]: (state) => {
+      return { ...state, loading: true };
+    },
+    [receive]: (state, { payload: { data } }) => {
+      return { ...state, data };
+    },
+    [error]: (state, { payload: { error } }) => {
+      return { ...state, error };
+    },
+  },
+  defaultState,
+)
+
+export default <%= reducer.reducerName.toLowerCase() %>;

@@ -1,0 +1,10 @@
+import { createActions } from 'redux-actions';
+
+export const { request, receive, error } = createActions({
+  request: (page = 1) => ({ page }),
+  receive: (data) => ({ data }),
+  error: [
+      (error) => ({ error }),
+      (error, type = 'generic') => ({ error, type }),
+  ]
+});

@@ -31,7 +31,7 @@ Card.propTypes = StandardGridPropTypes;
 
 export const CardHeader = ({ children, ...props }) => (
   <header className="card-header" {...props}>
-    <p className="card-header-item">{children}</p>
+    {children}
   </header>
 );
 CardHeader.propTypes = StandardGridPropTypes;

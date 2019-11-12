@@ -1,0 +1,11 @@
+import React from 'react';
+import enzyme from 'enzyme';
+import reducer from './<%= reducer.reducerName %>';
+import { request, receive, error } from '../actions/<%= reducer.reducerName %>';
+
+test('<%= reducer.reducerName %> reducer test', () => {
+  const state = {}
+  expect(reducer(state, request(1))).toEqual({ loading: true });
+  expect(reducer(state, receive(1))).toEqual({ data: 1 });
+  expect(reducer(state, error(1))).toEqual({ error: 1 });
+});
