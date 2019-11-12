@@ -1,14 +1,18 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const <%= component.componentName %> = () => (
   <div>
     Please edit <%= component.path %>/<%= component.fileName %> to update this component!
   </div>
 );
-
+<%= component.componentName %>.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
+<%= component.componentName %>.defaultProps = {};
 <%= component.componentName %>.displayName = "<%= component.displayName %>";
-// Uncomment properties you need
-// <%= component.componentName %>.propTypes = {};
-// <%= component.componentName %>.defaultProps = {};
 
 export default <%= component.componentName %>;

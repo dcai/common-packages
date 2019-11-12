@@ -1,0 +1,23 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+max_line_length = 80
+trim_trailing_whitespace = true
+
+[{COMMIT_EDITMSG,*.diff,*.md,*.patch}]
+trim_trailing_whitespace = false
+
+[COMMIT_EDITMSG]
+max_line_length = 72
+
+[*.md]
+max_line_length = off
+
+[{.travis.yml,package.json}]
+indent_size = 2
+indent_style = space

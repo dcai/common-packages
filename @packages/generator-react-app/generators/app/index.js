@@ -57,6 +57,11 @@ module.exports = class extends Generator {
   }
 
   writing() {
+    // copy dotfiles
+    this.fs.copy(this.templatePath('.*'), this.destinationRoot());
+    // copy all js files
+    this.fs.copy(this.templatePath('*.js'), this.destinationRoot());
+
     this.fs.copyTpl(
       this.templatePath('package.json'),
       this.destinationPath('package.json'),

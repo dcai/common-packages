@@ -2,23 +2,22 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Header from '../Header';
 import { increment, decrement } from '../../redux/actions';
+import { Row, Col, Card, CardHeader, CardContent, CardFooter } from '../Grid';
 
 const Page = ({ counter, dispatch }) => (
   <div>
     <Header />
-    <div className="columns" style={{ marginTop: '2em' }}>
-      <div className="column" />
-      <div className="column is-half has-text-centered">
-        <div className="card">
-          <header className="card-header">
+    <Row style={{ marginTop: '2em' }}>
+      <Col />
+      <Col className="column is-half has-text-centered">
+        <Card>
+          <CardHeader>
             <p className="card-header-title">Counter</p>
-          </header>
-          <div className="card-content">
-            <div className="content">
-              <p className="is-size-1">{counter}</p>
-            </div>
-          </div>
-          <footer className="card-footer">
+          </CardHeader>
+          <CardContent>
+            <p className="is-size-1">{counter}</p>
+          </CardContent>
+          <CardFooter>
             <a
               className="card-footer-item"
               onClick={() => dispatch(increment())}
@@ -31,11 +30,11 @@ const Page = ({ counter, dispatch }) => (
             >
               -
             </a>
-          </footer>
-        </div>
-      </div>
-      <div className="column" />
-    </div>
+          </CardFooter>
+        </Card>
+      </Col>
+      <Col />
+    </Row>
   </div>
 );
 
