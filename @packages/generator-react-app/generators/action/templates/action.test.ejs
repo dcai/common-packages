@@ -1,8 +1,9 @@
 import React from 'react';
 import enzyme from 'enzyme';
-import {request, receive, error} from './<%= action.actionName %>';
+import actions from './<%= action.actionName %>';
 
 test('<%= action.actionName %> action test', () => {
+    const { request, receive, error } = actions;
     expect(request(1)).toEqual({"payload": {"page": 1}, "type": "request"});
     expect(receive(12345)).toEqual({"payload": {data: 12345}, "type": "receive"});
     expect(error('error')).toEqual(

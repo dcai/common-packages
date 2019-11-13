@@ -1,7 +1,8 @@
-import { combineActions, handleActions } from 'redux-actions';
-import { request, receive, error } from '../actions/<%= reducer.reducerName %>';
+import { handleActions } from 'redux-actions';
+import actions from '../actions/<%= reducer.reducerName %>';
 
 const defaultState = {};
+const { request, receive, error } = actions;
 
 const <%= reducer.reducerName.toLowerCase() %> = handleActions(
   {

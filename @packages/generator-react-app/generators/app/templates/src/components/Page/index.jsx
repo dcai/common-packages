@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Header from '../Header';
-import { increment, decrement } from '../../redux/actions';
+import { counterActions } from '../../redux/actions';
 import { Row, Col, Card, CardHeader, CardContent, CardFooter } from '../Grid';
 
 const Page = ({ counter, dispatch }) => (
@@ -20,13 +20,13 @@ const Page = ({ counter, dispatch }) => (
           <CardFooter>
             <a
               className="card-footer-item"
-              onClick={() => dispatch(increment())}
+              onClick={() => dispatch(counterActions.increment())}
             >
               +
             </a>
             <a
               className="card-footer-item"
-              onClick={() => dispatch(decrement())}
+              onClick={() => dispatch(counterActions.decrement())}
             >
               -
             </a>
@@ -44,7 +44,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
   };
 };
 
-const mapDispatchToProps = dispatch => ({ dispatch });
+const mapDispatchToProps = (dispatch) => ({ dispatch });
 
 export default connect(
   mapStateToProps,

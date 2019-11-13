@@ -1,10 +1,23 @@
 import { createActions } from 'redux-actions';
 
-export const { request, receive, error } = createActions({
-  request: (page = 1) => ({ page }),
-  receive: (data) => ({ data }),
-  error: [
-      (error) => ({ error }),
-      (error, type = 'generic') => ({ error, type }),
-  ]
+const actions = createActions({
+  REQUEST: (page = 1) => ({ page }),
+  RECEIVE: (data) => ({ data }),
+  ERROR: [
+    (error) => ({ error }),
+    (error, type = 'generic') => ({ error, type }),
+  ],
 });
+
+/**
+console.info(
+  '<%= action.actionName %>Action functions created',
+  Object.keys(actions).map((action) => `actions.${action}`),
+);
+console.info(
+  '<%= action.actionName %>Action names',
+  Object.values(actions).map((action) => action.toString()),
+);
+*/
+
+export default actions;

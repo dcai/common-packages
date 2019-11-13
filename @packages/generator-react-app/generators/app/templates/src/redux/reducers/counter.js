@@ -1,9 +1,11 @@
 import { combineActions, handleActions } from 'redux-actions';
-import { increment, decrement } from '../actions';
+import { counterActions } from '../actions';
+
+const { increment, decrement } = counterActions;
 
 const defaultState = { counter: 0 };
 
-export const counter = handleActions(
+const counter = handleActions(
   {
     [combineActions(increment, decrement)]: (
       state,
@@ -14,3 +16,5 @@ export const counter = handleActions(
   },
   defaultState,
 );
+
+export default counter;
