@@ -2,7 +2,7 @@
   "name": "@friendlyrobot/eslint-config",
   "version": "1.1.0",
   "description": "eslint config",
-  "main": "src/index.js",
+  "main": "eslintrc.js",
   "publishConfig": {
     "access": "public"
   },
