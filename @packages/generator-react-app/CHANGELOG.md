@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-react-app@0.4.0...@friendlyrobot/generator-react-app@0.4.1) (2020-05-24)
+
+
+### Bug Fixes
+
+* **react-app:** improve code template ([0bb1ddb](https://github.com/dcai/common-packages/commit/0bb1ddb))
+* **react-app:** use hooks to replace connect() ([2dc48b1](https://github.com/dcai/common-packages/commit/2dc48b1))
+
+
+
+
+
 # [0.4.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-react-app@0.3.0...@friendlyrobot/generator-react-app@0.4.0) (2019-11-12)
 
 
