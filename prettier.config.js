@@ -1,6 +1,6 @@
 module.exports = {
-  arrowParens: 'avoid',
-  printWidth: 80,
+  arrowParens: 'always',
+  printWidth: 88,
   useTabs: false,
   tabWidth: 2,
   semi: true,
@@ -15,7 +15,10 @@ module.exports = {
     },
     {
       files: ['*.yaml', '*.yml'],
-      options: { parser: 'yaml' },
+      options: {
+        parser: 'yaml',
+        singleQuote: false,
+      },
     },
   ],
 };

@@ -14,7 +14,7 @@ module.exports = {
   ],
 
   settings: {
-    'import/extensions': ['.js', '.jsx'],
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
   },
 
   globals: {
@@ -29,6 +29,7 @@ module.exports = {
     node: true,
     mocha: true,
     jest: true,
+    commonjs: true,
   },
 
   rules: {
@@ -43,5 +44,8 @@ module.exports = {
     'react/no-danger': ERROR,
     'react/no-direct-mutation-state': ERROR,
     'react/prop-types': WARN,
+
+    'no-undef': 'error',
+    'no-unused-vars': 'warn',
   },
 };
