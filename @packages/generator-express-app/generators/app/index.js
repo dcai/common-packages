@@ -23,7 +23,7 @@ module.exports = class extends Generator {
         store: true,
         default: 'Dongsheng Cai',
       },
-    ]).then(answers => {
+    ]).then((answers) => {
       this.appname = answers.name;
       this.gituser = answers.gituser;
     });
