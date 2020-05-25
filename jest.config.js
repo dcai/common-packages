@@ -5,6 +5,7 @@ const ignorePatterns = [
   `<rootDir>/${packages}/(?:.+?)/dist/`,
   `<rootDir>/${packages}/(?:.+?)/webpack.config.js`,
   `<rootDir>/${packages}/(?:.+?)/node_modules/`,
+  `<rootDir>/${packages}/(?:.+?)/templates/`,
 ];
 
 module.exports = {

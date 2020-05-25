@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render a header 1`] = `ShallowWrapper {}`;
+
+exports[`render a header 2`] = `ShallowWrapper {}`;

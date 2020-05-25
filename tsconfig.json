@@ -2,5 +2,8 @@
   "compilerOptions": {
     "sourceMap": true,
     "noImplicitAny": true
-  }
+  },
+  "exclude": [
+    "**/*.test.ts"
+  ]
 }

@@ -6,6 +6,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-unresolved': 'warn',
     'no-plusplus': 'warn',
+    'no-console': 'warn',
     'react/forbid-prop-types': 'warn',
     'react/jsx-filename-extension': 'warn',
     'react/prefer-stateless-function': 'warn',

@@ -15,13 +15,16 @@ if (fs.existsSync(`${cwd}/webpack.config`)) {
 }
 
 webpack(config, (err, stats) => {
-  if (err || stats.hasErrors()) {
-    log.warn(`Build ${pkg.name} has failed.`);
-    log.warn(
+  const hasError = err || stats.hasErrors();
+  if (hasError) {
+    log.error(`Build ${pkg.name} has failed.`);
+    console.error('===== webpack stats output begin =====');
+    console.error(
       stats.toString({
         color: true,
       }),
     );
+    console.error('===== webpack stats output end =====');
   } else {
     log.info(`Build ${pkg.name} completed.`);
   }
