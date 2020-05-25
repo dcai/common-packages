@@ -3,29 +3,36 @@ const Generator = require('yeoman-generator');
 module.exports = class extends Generator {
   constructor(args, opts) {
     super(args, opts);
+    this.data = {};
 
     this.argument('appname', { type: String, required: false });
-    this.appname = this.options.appname;
+    this.data.appname = this.options.appname;
   }
 
   prompting() {
     return this.prompt([
       {
         type: 'input',
-        name: 'name',
+        name: 'appname',
         message: 'Your project name',
         default: this.options.appname,
       },
       {
         type: 'input',
-        name: 'gituser',
-        message: 'Your github user',
+        name: 'author',
+        message: 'github username',
         store: true,
-        default: 'Dongsheng Cai',
+        default: 'dcai',
+      },
+      {
+        type: 'input',
+        name: 'license',
+        message: 'Your license',
+        store: true,
+        default: 'BSD-2-Clause',
       },
     ]).then((answers) => {
-      this.appname = answers.name;
-      this.gituser = answers.gituser;
+      this.data = answers;
     });
   }
 
@@ -36,40 +43,28 @@ module.exports = class extends Generator {
   writing() {
     // copy dotfiles
     this.fs.copy(this.templatePath('.*'), this.destinationRoot());
-    // copy all js files
+    // copy js files: jest.config.js setupTest.js etc
     this.fs.copy(this.templatePath('*.js'), this.destinationRoot());
 
     this.fs.copyTpl(
       this.templatePath('package.json'),
       this.destinationPath('package.json'),
-      { appname: this.appname, gituser: this.gituser },
+      { ...this.data },
     );
 
     const pkgJson = {
+      repository: {
+        type: 'git',
+        url: `https://github.com/${this.data.author}/${this.data.appname}.git`,
+      },
       devDependencies: {},
       dependencies: {},
     };
 
-    if (this.reactRouter) {
-      pkgJson.dependencies['react-router-dom'] = '*';
-    }
-    if (this.typescript) {
-      pkgJson.devDependencies['@types/react'] = '*';
-      pkgJson.devDependencies['@types/react-dom'] = '*';
-    }
-
     this.fs.extendJSON(this.destinationPath('package.json'), pkgJson);
 
     this.fs.copyTpl(this.templatePath('src'), this.destinationPath('src'), {
-      appname: this.appname,
-      typescript: this.typescript,
+      ...this.data,
     });
-    if (this.typescript) {
-      this.fs.copyTpl(
-        this.templatePath('tsconfig.json'),
-        this.destinationPath('tsconfig.json'),
-        {},
-      );
-    }
   }
 };

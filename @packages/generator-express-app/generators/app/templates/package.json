@@ -2,7 +2,9 @@
   "name": "<%= appname %>",
   "version": "1.0.0",
   "description": "<%= appname %>",
-  "main": "src/app.js",
+  "author": "<%= author %>",
+  "license": "<%= license %>",
+  "main": "src/server.js",
   "engines": {
     "node": ">=10"
   },
@@ -14,9 +16,6 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
-  "keywords": [],
-  "author": "Dongsheng Cai (http://dongsheng.org/)",
-  "license": "BSD-2-Clause",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
