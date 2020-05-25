@@ -2,25 +2,21 @@
   "name": "@friendlyrobot/generator-express-app",
   "version": "0.7.0",
   "description": "express app scaffolding",
-  "homepage": "",
+  "homepage": "https://github.com/dcai/common-packages",
   "author": {
     "name": "Dongsheng Cai",
     "email": "d@tux.im",
-    "url": ""
+    "url": "https://dongsheng.org"
   },
-  "files": [
-    "generators"
-  ],
+  "files": ["generators"],
   "main": "generators/app/index.js",
-  "keywords": [
-    "yeoman-generator"
-  ],
+  "keywords": ["yeoman-generator"],
   "dependencies": {
     "chalk": "^2.1.0",
     "yeoman-generator": "^2.0.1",
     "yosay": "^2.0.1"
   },
   "repository": "git@github.com:dcai/common-packages.git",
-  "license": "BSD-2-Clause-FreeBSD",
+  "license": "BSD-2-Clause",
   "gitHead": "348a98c11ca1111495496f77de028765fb3a69d5"
 }
