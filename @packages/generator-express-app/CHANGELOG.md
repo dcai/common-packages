@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.6.0...@friendlyrobot/generator-express-app@0.7.0) (2020-05-25)
+
+
+### Features
+
+* **express:** cleanup ([da28522](https://github.com/dcai/common-packages/commit/da285222c989ddedef9b2ced87fa20caf4bfa156))
+
+
+
+
+
 # [0.6.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.5.0...@friendlyrobot/generator-express-app@0.6.0) (2020-05-25)
 
 
