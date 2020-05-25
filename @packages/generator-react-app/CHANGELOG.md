@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-react-app@0.4.1...@friendlyrobot/generator-react-app@0.4.2) (2020-05-25)
+
+
+### Bug Fixes
+
+* **eslint:** eslint and typescript ([07a8c1f](https://github.com/dcai/common-packages/commit/07a8c1fb5f8efd25a50739e9bce448ab68a02d56))
+
+
+
+
+
 ## [0.4.1](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-react-app@0.4.0...@friendlyrobot/generator-react-app@0.4.1) (2020-05-24)
 
 

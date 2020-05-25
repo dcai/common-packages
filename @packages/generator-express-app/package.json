@@ -1,6 +1,6 @@
 {
   "name": "@friendlyrobot/generator-express-app",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "express app scaffolding",
   "homepage": "",
   "author": {
@@ -8,9 +8,13 @@
     "email": "d@tux.im",
     "url": ""
   },
-  "files": ["generators"],
+  "files": [
+    "generators"
+  ],
   "main": "generators/app/index.js",
-  "keywords": ["yeoman-generator"],
+  "keywords": [
+    "yeoman-generator"
+  ],
   "dependencies": {
     "chalk": "^2.1.0",
     "yeoman-generator": "^2.0.1",
