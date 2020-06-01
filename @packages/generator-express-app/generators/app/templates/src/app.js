@@ -4,28 +4,32 @@ const fg = require('fast-glob');
 const path = require('path');
 
 const app = express();
+const currentDir = __dirname;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-console.info(__dirname, process.cwd());
 const controllers = fg.sync('controllers/**', {
   onlyFiles: true,
-  cwd: __dirname,
+  cwd: currentDir,
+  deep: 1,
+});
+controllers.forEach((file) => {
+  const fn = require(path.join(currentDir, file));
+  app.use(fn);
+});
+
+// middlewares must be loaded after controllers
+const middlewares = fg.sync('middlewares/**', {
+  onlyFiles: true,
+  cwd: currentDir,
   deep: 1,
 });
 
-console.info(controllers);
-controllers.forEach((c) => {
-  const controller = require(path.join(__dirname, c));
-  app.use(controller);
+middlewares.forEach((file) => {
+  const fn = require(path.join(currentDir, file));
+  app.use(fn);
 });
-
-// app.use('/', (req, res) => {
-// res.status(200).json({
-// status: 'ok',
-// });
-// });
 
 module.exports = app;
