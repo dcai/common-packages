@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.8.0...@friendlyrobot/generator-express-app@0.9.0) (2020-06-06)
+
+
+### Features
+
+* **express:** add error handling ([3583ab5](https://github.com/dcai/common-packages/commit/3583ab53b03b53c3bbefa7456978f22df3cf008a))
+* **express:** add static folder ([010eb48](https://github.com/dcai/common-packages/commit/010eb48f0a053889393f1cd6ef97c673c466b211))
+
+
+
+
+
 # [0.8.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.7.0...@friendlyrobot/generator-express-app@0.8.0) (2020-05-25)
 
 
