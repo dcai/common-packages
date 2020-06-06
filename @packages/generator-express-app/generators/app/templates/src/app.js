@@ -8,6 +8,7 @@ const currentDir = __dirname;
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 const controllers = fg.sync('controllers/**', {
@@ -16,6 +17,7 @@ const controllers = fg.sync('controllers/**', {
   deep: 1,
 });
 controllers.forEach((file) => {
+  // eslint-disable-next-line global-require, import/no-dynamic-require
   const fn = require(path.join(currentDir, file));
   app.use(fn);
 });
@@ -28,6 +30,7 @@ const middlewares = fg.sync('middlewares/**', {
 });
 
 middlewares.forEach((file) => {
+  // eslint-disable-next-line global-require, import/no-dynamic-require
   const fn = require(path.join(currentDir, file));
   app.use(fn);
 });
