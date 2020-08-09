@@ -11,6 +11,19 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
+// middlewares loaded before controllers
+const beforeMiddlewares = fg.sync('middlewares/before/**', {
+  onlyFiles: true,
+  cwd: currentDir,
+  deep: 1,
+});
+
+beforeMiddlewares.forEach((file) => {
+  // eslint-disable-next-line global-require, import/no-dynamic-require
+  const fn = require(path.join(currentDir, file));
+  app.use(fn);
+});
+
 const controllers = fg.sync('controllers/**', {
   onlyFiles: true,
   cwd: currentDir,
@@ -22,14 +35,14 @@ controllers.forEach((file) => {
   app.use(fn);
 });
 
-// middlewares must be loaded after controllers
-const middlewares = fg.sync('middlewares/**', {
+// middlewares loaded after controllers
+const afterMiddlewares = fg.sync('middlewares/after/**', {
   onlyFiles: true,
   cwd: currentDir,
   deep: 1,
 });
 
-middlewares.forEach((file) => {
+afterMiddlewares.forEach((file) => {
   // eslint-disable-next-line global-require, import/no-dynamic-require
   const fn = require(path.join(currentDir, file));
   app.use(fn);
