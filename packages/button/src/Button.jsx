@@ -23,8 +23,7 @@ class Button extends Component {
     return (
       <button onClick={this.onClick}>
         <span className="label">
-          {this.state.label} (
-          {this.state.label === 'clicked' && this.state.counter})
+          {this.state.label} ({this.state.label === 'clicked' && this.state.counter})
         </span>
       </button>
     );

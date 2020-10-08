@@ -1,5 +1,5 @@
 {
-  "packages": ["@packages/*"],
+  "packages": ["packages/*"],
   "command": {
     "bootstrap": {
       "noSort": true,
@@ -12,11 +12,6 @@
       "message": "chore(release): publish npm packages"
     }
   },
-  "ignoreChanges": [
-    "**/dist/**",
-    "**/tests/**",
-    "**/*.md",
-    "**/package-lock.json"
-  ],
+  "ignoreChanges": ["**/dist/**", "**/tests/**", "**/*.md", "**/package-lock.json"],
   "version": "independent"
 }

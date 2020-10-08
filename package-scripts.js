@@ -1,7 +1,7 @@
 const cmdPrepublish =
   'nps release.pre-publish.reset-git && nps release.pre-publish.setup-npm';
 const cmdPublish = `npm start release.pre-publish && lerna publish`;
-const cmdCopyNpmrc = 'for p in @packages/*; do cp npmrc-template.ini ${p}/.npmrc; done';
+const cmdCopyNpmrc = 'for p in packages/*; do cp npmrc-template.ini ${p}/.npmrc; done';
 
 const scripts = {
   tools: {

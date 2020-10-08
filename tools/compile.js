@@ -8,7 +8,7 @@ let componentName = argv.component;
 if (!componentName) {
   const componentFromPath = process
     .cwd()
-    .match(/@packages(?:\/|\\)(.*?)(?:(?:\/|\\)|$)/);
+    .match(/packages(?:\/|\\)(.*?)(?:(?:\/|\\)|$)/);
 
   if (!componentFromPath) {
     log.error(
@@ -19,7 +19,7 @@ if (!componentName) {
     [, componentName] = componentFromPath;
   }
 }
-const packagePath = `${__dirname}/../@packages/${componentName}`;
+const packagePath = `${__dirname}/../packages/${componentName}`;
 
 // now we build the package
 log.info(path.resolve(packagePath));

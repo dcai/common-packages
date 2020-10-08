@@ -1,6 +1,6 @@
 const path = require('path');
 const { defaults } = require('jest-config');
-const packages = '\\@packages';
+const packages = 'packages';
 const ignorePatterns = [
   `<rootDir>/${packages}/(?:.+?)/dist/`,
   `<rootDir>/${packages}/(?:.+?)/webpack.config.js`,
@@ -19,7 +19,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   // reporters: ['jest-junit'],
   // snapshotSerializers: ['enzyme-to-json/serializer'],
-  testMatch: ['**/@packages/**/*.test.{js,jsx,ts,tsx}'],
+  testMatch: ['**/packages/**/*.test.{js,jsx,ts,tsx}'],
   moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
   testPathIgnorePatterns: ignorePatterns,
   coveragePathIgnorePatterns: ignorePatterns,

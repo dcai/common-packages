@@ -6,7 +6,7 @@ const camelCase = require('camelcase');
 
 const create = (componentName) => {
   const templateFolder = path.join(__dirname, './templates');
-  const packagesFolder = path.join(__dirname, '../@packages');
+  const packagesFolder = path.join(__dirname, '../packages');
   const targetFolder = path.join(packagesFolder, componentName);
   const data = {
     name: componentName,

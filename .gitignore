@@ -9,11 +9,11 @@ coverage
 junit.xml
 
 # ignore generated webpack bundle
-/@packages/**/dist/
-/@packages/**/.npmrc
-/@packages/**/*.tgz
-/@packages/**/stats.json
-/@packages/**/package-lock.json
+/packages/**/dist/
+/packages/**/.npmrc
+/packages/**/*.tgz
+/packages/**/stats.json
+/packages/**/package-lock.json
 
 # ignore docs
 /docs
