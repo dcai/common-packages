@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-react-app@0.4.2...@friendlyrobot/generator-react-app@0.5.0) (2020-10-08)
+
+
+### Features
+
+* rename [@packages](https://github.com/packages) to packages/ ([9366e0c](https://github.com/dcai/common-packages/commit/9366e0c2274b320eca03609296f260c84eefc76f))
+
+
+
+
+
 ## [0.4.2](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-react-app@0.4.1...@friendlyrobot/generator-react-app@0.4.2) (2020-05-25)
 
 
