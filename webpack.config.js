@@ -70,7 +70,6 @@ module.exports = {
     'redux-saga',
     'reselect',
     'grid-styled',
-    'styled-components',
     'styled-normalize',
     'prop-types',
     'lodash',
