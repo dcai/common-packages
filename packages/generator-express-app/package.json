@@ -1,20 +1,16 @@
 {
   "name": "@friendlyrobot/generator-express-app",
   "version": "0.10.0",
-  "description": "express app scaffolding",
+  "description": "express app code generator",
   "homepage": "https://github.com/dcai/common-packages",
   "author": {
     "name": "Dongsheng Cai",
     "email": "d@tux.im",
     "url": "https://dongsheng.org"
   },
-  "files": [
-    "generators"
-  ],
+  "files": ["generators"],
   "main": "generators/app/index.js",
-  "keywords": [
-    "yeoman-generator"
-  ],
+  "keywords": ["yeoman-generator"],
   "dependencies": {
     "chalk": "^2.1.0",
     "yeoman-generator": "^2.0.1",
