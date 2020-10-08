@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.10.0...@friendlyrobot/generator-express-app@0.11.0) (2020-10-08)
+
+
+### Features
+
+* update express codegen ([5ccd4ca](https://github.com/dcai/common-packages/commit/5ccd4caffbb1ddf19b85dcd983be6c68cf4e7f37))
+
+
+
+
+
 # [0.10.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.9.1...@friendlyrobot/generator-express-app@0.10.0) (2020-10-08)
 
 
