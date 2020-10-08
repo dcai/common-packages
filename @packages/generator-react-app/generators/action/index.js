@@ -16,7 +16,7 @@ module.exports = class extends Generator {
         message: 'Action name',
         default: this.options.actionName,
       },
-    ]).then(answers => answers);
+    ]).then((answers) => answers);
   }
 
   writing() {

@@ -16,7 +16,7 @@ module.exports = class extends Generator {
         message: 'Component name',
         default: this.options.componentName,
       },
-    ]).then(answers => answers);
+    ]).then((answers) => answers);
   }
 
   writing() {

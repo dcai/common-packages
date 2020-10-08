@@ -4,7 +4,7 @@ const yargs = require('yargs');
 const { generate } = require('@friendlyrobot/code-generator');
 const camelCase = require('camelcase');
 
-const create = componentName => {
+const create = (componentName) => {
   const templateFolder = path.join(__dirname, './templates');
   const packagesFolder = path.join(__dirname, '../@packages');
   const targetFolder = path.join(packagesFolder, componentName);
@@ -22,12 +22,12 @@ yargs
   .command(
     '$0 [name]',
     'Create new component with component name',
-    y => {
+    (y) => {
       y.positional('name', {
         describe: 'Component name to be created',
       });
     },
-    a => {
+    (a) => {
       const options = {
         logLevel: a.verbose ? 'verbose' : 'warn',
       };

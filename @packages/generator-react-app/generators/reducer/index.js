@@ -16,7 +16,7 @@ module.exports = class extends Generator {
         message: 'Reducer name',
         default: this.options.reducerName,
       },
-    ]).then(answers => answers);
+    ]).then((answers) => answers);
   }
 
   writing() {
