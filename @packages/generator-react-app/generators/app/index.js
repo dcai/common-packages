@@ -37,14 +37,14 @@ module.exports = class extends Generator {
           },
         ],
       },
-    ]).then(answers => {
+    ]).then((answers) => {
       this.appname = answers.name;
       this.gituser = answers.gituser;
 
       this.reactRouter = false;
 
       if (answers.extras) {
-        answers.extras.forEach(el => {
+        answers.extras.forEach((el) => {
           if (el === 'React Router') this.reactRouter = true;
           else if (el === 'Typescript') this.typescript = true;
         });
@@ -61,6 +61,10 @@ module.exports = class extends Generator {
     this.fs.copy(this.templatePath('.*'), this.destinationRoot());
     // copy all js files
     this.fs.copy(this.templatePath('*.js'), this.destinationRoot());
+    this.fs.copy(
+      this.templatePath('eslintrc.js.tpl'),
+      this.destinationPath('.eslintrc.js'),
+    );
 
     this.fs.copyTpl(
       this.templatePath('package.json'),
