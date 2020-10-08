@@ -1,4 +1,5 @@
 const { spawn } = require('child_process');
+const { last } = require('lodash');
 const { argv } = require('yargs').alias('c', 'component');
 const path = require('path');
 const { log } = require('@friendlyrobot/cli-logger');
@@ -6,17 +7,18 @@ const { isString } = require('lodash');
 
 let componentName = argv.component;
 if (!componentName) {
-  const componentFromPath = process
-    .cwd()
-    .match(/packages(?:\/|\\)(.*?)(?:(?:\/|\\)|$)/);
+  componentName = last(
+    process
+      .cwd()
+      .split('/')
+      .filter(Boolean),
+  );
 
-  if (!componentFromPath) {
+  if (!componentName) {
     log.error(
       'No component name provided, specify with --component <name> or call build from component folder',
     );
     process.exit(1);
-  } else {
-    [, componentName] = componentFromPath;
   }
 }
 const packagePath = `${__dirname}/../packages/${componentName}`;
