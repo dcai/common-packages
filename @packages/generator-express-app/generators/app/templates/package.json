@@ -9,8 +9,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "node src/server.js",
-    "start:dev": "nodemon src/server.js",
+    "start": "NODE_ENV=production node -r dotenv/config src/server.js",
+    "start:dev": "nodemon -r dotenv/config src/server.js",
     "test": "npm run test:jest --",
     "test:jest": "jest",
     "test:watch": "jest --watch",
@@ -19,6 +19,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "fast-glob": "^3.2.2",
     "nodemon": "^2.0.4"
