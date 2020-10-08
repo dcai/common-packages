@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.1](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.11.0...@friendlyrobot/generator-express-app@0.11.1) (2020-10-08)
+
+
+### Bug Fixes
+
+* compile.js ([34dc71f](https://github.com/dcai/common-packages/commit/34dc71f45d1c26c13ffbdb3b4f1278dd1846131b))
+
+
+
+
+
 # [0.11.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.10.0...@friendlyrobot/generator-express-app@0.11.0) (2020-10-08)
 
 
