@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.11.1...@friendlyrobot/generator-express-app@0.11.2) (2021-03-16)
+
+
+### Bug Fixes
+
+* **generator-express-app:** update @babel/eslint-parser ([6783715](https://github.com/dcai/common-packages/commit/6783715f6d791b2ec8e216d9fdf073fca64557d3))
+
+
+
+
+
 ## [0.11.1](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.11.0...@friendlyrobot/generator-express-app@0.11.1) (2020-10-08)
 
 
