@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/dcai/common-packages/compare/@friendlyrobot/eslint-config@1.3.1...@friendlyrobot/eslint-config@1.3.2) (2021-03-16)
+
+
+### Bug Fixes
+
+* **eslint:** update ([1cfe872](https://github.com/dcai/common-packages/commit/1cfe8728b563452eec7637eaf2af3706eea57de7))
+
+
+
+
+
 ## [1.3.1](https://github.com/dcai/common-packages/compare/@friendlyrobot/eslint-config@1.3.0...@friendlyrobot/eslint-config@1.3.1) (2020-10-08)
 
 **Note:** Version bump only for package @friendlyrobot/eslint-config
