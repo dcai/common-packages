@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.3](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.11.2...@friendlyrobot/generator-express-app@0.11.3) (2021-03-16)
+
+
+### Bug Fixes
+
+* **generator-express-app:** code update ([8a345cb](https://github.com/dcai/common-packages/commit/8a345cb80d496051f90c436960d28bf564e3c493))
+
+
+
+
+
 ## [0.11.2](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.11.1...@friendlyrobot/generator-express-app@0.11.2) (2021-03-16)
 
 
