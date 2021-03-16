@@ -20,8 +20,8 @@ const beforeMiddlewares = fg.sync('middlewares/before/**', {
 
 beforeMiddlewares.forEach((file) => {
   // eslint-disable-next-line global-require, import/no-dynamic-require
-  const fn = require(path.join(currentDir, file));
-  app.use(fn);
+  const router = require(path.join(currentDir, file));
+  app.use(router);
 });
 
 const controllers = fg.sync('controllers/**', {
