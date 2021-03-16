@@ -3,10 +3,12 @@ const WARN = 1;
 const ERROR = 2;
 
 module.exports = {
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   plugins: ['babel', 'import', 'react', 'prettier'],
   extends: [
     'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
     'prettier/react',
