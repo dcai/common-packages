@@ -29,7 +29,7 @@ module.exports = {
     libraryTarget: 'umd',
   },
   // devtool: 'source-map',
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval-cheap-source-map',
   stats: {
     colors: true,
     reasons: true,

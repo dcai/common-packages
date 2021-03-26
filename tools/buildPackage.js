@@ -3,6 +3,7 @@ const { log } = require('@friendlyrobot/cli-logger');
 const fs = require('fs');
 const cwd = process.cwd();
 const webpack = require('webpack');
+const _ = require('lodash');
 
 const pkg = require(`${cwd}/package.json`);
 
@@ -18,13 +19,9 @@ webpack(config, (err, stats) => {
   const hasError = err || stats.hasErrors();
   if (hasError) {
     log.error(`Build ${pkg.name} has failed.`);
-    console.error('===== webpack stats output begin =====');
-    console.error(
-      stats.toString({
-        color: true,
-      }),
-    );
-    console.error('===== webpack stats output end =====');
+    log.error('===== webpack build error begin =====');
+    log.error(_.toString(err));
+    log.error('===== webpack build error end =====');
   } else {
     log.info(`Build ${pkg.name} completed.`);
   }
