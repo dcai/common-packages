@@ -1,6 +1,6 @@
 {
   "name": "@friendlyrobot/generator-express-app",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "express app code generator",
   "homepage": "https://github.com/dcai/common-packages",
   "author": {
