@@ -5,7 +5,7 @@ module.exports = class extends Generator {
     super(args, opts);
     this.data = {};
 
-    this.argument('appname', { type: String, required: false });
+    this.argument('appname', { type: String, required: true });
     this.data.appname = this.options.appname;
   }
 
