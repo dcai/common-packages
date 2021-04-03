@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.11.3...@friendlyrobot/generator-express-app@0.15.0) (2021-04-03)
+
+
+### Features
+
+* **generator-express-app:** add knex ([2ef9fd7](https://github.com/dcai/common-packages/commit/2ef9fd75c2c3de76bf662d30357fe80e35a49ea7))
+* **lerna:** no package-lock for publishing ([1a22791](https://github.com/dcai/common-packages/commit/1a22791121713a10dfa0a748557e25fba4a1e813))
+* **lerna:** no package-lock for publishing ([be4a270](https://github.com/dcai/common-packages/commit/be4a2708a9d8e69a598c0cb52125628dcf4f4ca2))
+* **lerna:** no package-lock for publishing ([71283fc](https://github.com/dcai/common-packages/commit/71283fcf4caa8028ee94aaf95f1fb1ce7259dfd3))
+
+
+
+
+
 # [0.14.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.11.3...@friendlyrobot/generator-express-app@0.14.0) (2021-04-03)
 
 
