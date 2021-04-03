@@ -42,12 +42,21 @@ module.exports = class extends Generator {
 
   writing() {
     // copy dotfiles
-    this.fs.copy(this.templatePath('.*'), this.destinationRoot());
+    // this.fs.copy(this.templatePath('.*'), this.destinationRoot());
     // copy js files: jest.config.js setupTest.js etc
     this.fs.copy(this.templatePath('*.js'), this.destinationRoot());
     this.fs.copy(
       this.templatePath('eslintrc.js.tpl'),
       this.destinationPath('.eslintrc.js'),
+    );
+    this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'));
+    this.fs.copy(
+      this.templatePath('editorconfig'),
+      this.destinationPath('.editorconfig'),
+    );
+    this.fs.copyTpl(
+      this.templatePath('babel.config.js'),
+      this.destinationPath('babel.config.js'),
     );
 
     this.fs.copyTpl(

@@ -11,3 +11,5 @@ yarn.lock
 dist/
 junit.xml
 graphql.rest
+.env
+*.sqlite3

@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const fg = require('fast-glob');
 const path = require('path');
+const knex = require('./knex');
 
 const app = express();
 const currentDir = __dirname;
@@ -10,6 +11,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
+app.use((req, res, next) => {
+  res.locals.knex = knex;
+  next();
+});
 
 // middlewares loaded before controllers
 const beforeMiddlewares = fg.sync('middlewares/before/**', {
