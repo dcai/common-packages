@@ -43,7 +43,7 @@ module.exports = class extends Generator {
   writing() {
     // copy dotfiles
     // this.fs.copy(this.templatePath('.*'), this.destinationRoot());
-    // copy js files: jest.config.js setupTest.js etc
+    // copy js files in root: jest.config.js setupTest.js etc
     this.fs.copy(this.templatePath('*.js'), this.destinationRoot());
     this.fs.copy(
       this.templatePath('eslintrc.js.tpl'),
