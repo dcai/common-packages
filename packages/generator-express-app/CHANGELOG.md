@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.11.3...@friendlyrobot/generator-express-app@0.12.0) (2021-04-03)
+
+
+### Features
+
+* **generator-express-app:** add knex ([2ef9fd7](https://github.com/dcai/common-packages/commit/2ef9fd75c2c3de76bf662d30357fe80e35a49ea7))
+
+
+
+
+
 ## [0.11.3](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.11.2...@friendlyrobot/generator-express-app@0.11.3) (2021-03-16)
 
 
