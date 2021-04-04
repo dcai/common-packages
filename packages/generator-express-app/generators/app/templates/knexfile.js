@@ -1,26 +1,28 @@
 // Update with your config settings.
 
-const base = {
-  seeds: {
-    directory: `${__dirname}/knex/seeds`,
-  },
-  migrations: {
-    tableName: 'knex_migrations',
-    directory: `${__dirname}/knex/migrations`,
-  },
+const makeBaseConfig = (client = 'sqlite') => {
+  return {
+    client,
+    seeds: {
+      directory: `${__dirname}/knex/seeds`,
+    },
+    migrations: {
+      tableName: 'knex_migrations',
+      directory: `${__dirname}/knex/migrations`,
+    },
+  };
 };
 module.exports = {
   development: {
-    ...base,
-    client: 'sqlite3',
+    ...makeBaseConfig('sqlite'),
+    useNullAsDefault: true,
     connection: {
       filename: process.env.SQLITE_DB_PATH || `${__dirname}/knex/dev.sqlite3`,
     },
   },
 
   staging: {
-    ...base,
-    client: 'postgresql',
+    ...makeBaseConfig('postgresql'),
     connection: {
       database: 'my_db',
       user: 'username',
@@ -29,8 +31,7 @@ module.exports = {
   },
 
   production: {
-    ...base,
-    client: 'postgresql',
+    ...makeBaseConfig('postgresql'),
     connection: {
       database: 'my_db',
       user: 'username',
