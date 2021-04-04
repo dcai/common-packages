@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.16.0...@friendlyrobot/generator-express-app@0.17.0) (2021-04-04)
+
+
+### Features
+
+* **generator-express-app:** auth middleware ([6d858db](https://github.com/dcai/common-packages/commit/6d858db4e367f71909508b52714f6b428c323844))
+* **generator-express-app:** run-s and knex config ([6e3b842](https://github.com/dcai/common-packages/commit/6e3b8426d1316351385fb53b7fe64f9fc4a64d38))
+
+
+
+
+
 # [0.16.0](https://github.com/dcai/common-packages/compare/@friendlyrobot/generator-express-app@0.15.0...@friendlyrobot/generator-express-app@0.16.0) (2021-04-03)
 
 
