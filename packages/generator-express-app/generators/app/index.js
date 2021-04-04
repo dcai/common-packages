@@ -24,13 +24,6 @@ module.exports = class extends Generator {
         store: true,
         default: 'dcai',
       },
-      {
-        type: 'input',
-        name: 'license',
-        message: 'Your license',
-        store: true,
-        default: 'BSD-2-Clause',
-      },
     ]).then((answers) => {
       this.data = answers;
     });
@@ -53,10 +46,6 @@ module.exports = class extends Generator {
     this.fs.copy(
       this.templatePath('editorconfig'),
       this.destinationPath('.editorconfig'),
-    );
-    this.fs.copyTpl(
-      this.templatePath('babel.config.js'),
-      this.destinationPath('babel.config.js'),
     );
 
     this.fs.copyTpl(

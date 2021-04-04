@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "<%= appname %>",
   "author": "<%= author %>",
-  "license": "<%= license %>",
+  "license": "BSD-2-Clause",
   "main": "src/server.js",
   "engines": {
     "node": ">=10"
